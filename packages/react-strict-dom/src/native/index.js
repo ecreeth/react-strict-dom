@@ -11,12 +11,8 @@ import typeof * as TStyleX from '@stylexjs/stylex';
 
 import * as html from './html';
 import * as cssRaw from './stylex';
-import { ThemeProvider } from './modules/ThemeContext';
-import { typeof ThemeProvider as TThemeProvider } from './modules/ThemeContext';
-
-const contexts = { ThemeProvider: ThemeProvider as TThemeProvider };
 
 // Export using StyleX types as the shim has divergent types internally.
 const css: TStyleX = cssRaw as $FlowFixMe;
 
-export { contexts, css, html };
+export { css, html };

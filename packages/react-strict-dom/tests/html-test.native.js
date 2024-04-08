@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { css, html, contexts } from 'react-strict-dom';
+import { css, html } from 'react-strict-dom';
 import { act, create } from 'react-test-renderer';
 
 describe('html', () => {
@@ -55,25 +55,6 @@ describe('html', () => {
   });
 
   describe('style polyfills', () => {
-    test('legacy: ThemeProvider', () => {
-      const { ThemeProvider } = contexts;
-      const customProperties = {
-        rootColor: 'red'
-      };
-      const styles = css.create({
-        root: {
-          color: 'var(--rootColor)'
-        }
-      });
-
-      const root = create(
-        <ThemeProvider customProperties={customProperties}>
-          <html.span style={styles.root}>Expect color:red</html.span>
-        </ThemeProvider>
-      );
-      expect(root.toJSON()).toMatchSnapshot();
-    });
-
     test('inherited themes', () => {
       const tokens = css.defineVars({
         rootColor: 'red',

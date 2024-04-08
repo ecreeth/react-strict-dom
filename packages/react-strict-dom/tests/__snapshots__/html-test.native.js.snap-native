@@ -1415,18 +1415,3 @@ exports[`html style polyfills inherited themes 1`] = `
   </Text>,
 ]
 `;
-
-exports[`html style polyfills legacy: ThemeProvider 1`] = `
-<Text
-  dir="auto"
-  style={
-    {
-      "color": "red",
-      "position": "static",
-      "userSelect": "auto",
-    }
-  }
->
-  Expect color:red
-</Text>
-`;
